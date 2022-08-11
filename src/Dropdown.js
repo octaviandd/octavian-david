@@ -72,6 +72,8 @@ const Dropdown = ({ title, description, subtitle }) => {
         <div className="pt-[10px] pb-[20px] px-[20px]">
           {subtitle === "spotifier" ||
           subtitle === "latergram" ||
+          subtitle === "09/2016 - 09/2019" ||
+          subtitle === "01/2021 - 01/2022" ||
           subtitle === "chess" ? (
             <span className="text-[#666666]">{description}</span>
           ) : (
