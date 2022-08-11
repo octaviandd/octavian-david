@@ -1,7 +1,29 @@
-import React from "react";
+/** @format */
+
+import React, { useState } from "react";
 import styled from "styled-components";
 
+const FORM_ENDPOINT = "";
+
 const ContactForm = () => {
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = () => {
+    setTimeout(() => {
+      setSubmitted(true);
+    }, 100);
+  };
+
+  if (submitted) {
+    return (
+      <>
+        <div className="text-2xl">Thank you!</div>
+
+        <div className="text-md">We'll be in touch soon.</div>
+      </>
+    );
+  }
+
   return (
     <div className="w-full sm:w-[60%]">
       <div style={{ display: "contents" }}>
@@ -9,7 +31,11 @@ const ContactForm = () => {
           <Container>
             <div style={{ opacity: "1" }}>
               <FormParentContainer>
-                <Form method="POST">
+                <Form
+                  action={FORM_ENDPOINT}
+                  onSubmit={handleSubmit}
+                  method="POST"
+                >
                   <FormGrid>
                     <Input type="email" name="email" placeholder="Email" />
                   </FormGrid>

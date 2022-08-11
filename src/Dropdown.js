@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CaretDown } from "phosphor-react";
@@ -68,7 +70,20 @@ const Dropdown = ({ title, description, subtitle }) => {
           </motion.span>
         </div>
         <div className="pt-[10px] pb-[20px] px-[20px]">
-          <span className="text-[#666666]">{description}</span>
+          {subtitle === "spotifier" ||
+          subtitle === "latergram" ||
+          subtitle === "chess" ? (
+            <span className="text-[#666666]">{description}</span>
+          ) : (
+            <ul className="list-disc">
+              {description
+                .split(".")
+                .slice(0, -1)
+                .map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+            </ul>
+          )}
         </div>
       </motion.div>
     </AnimatePresence>

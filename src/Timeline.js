@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useEffect, useState } from "react";
 import {
   motion,
@@ -114,12 +116,7 @@ function Timeline() {
             <Dropdown
               title="LaterGRAM"
               subtitle="latergram"
-              description="Full-stack project inspired from Instagram's display. 
-              The back-end is build with Apollo Server and Express, this is connected to a MongoDB via Mongoose.
-               The relationship between the front-end data back-end data is supported by Apollo Client and GraphQL.
-                The front-end is build using React components and Hooks, the styling is done with Styled Components.
-                 The authentication is done with a JWT token which is stored as a cookie, everything that connects to the back end is done via GraphQL. 
-                 The list of functionality includes creating accounts, adding pictures, likes and comments. Images are stored via AWS S3."
+              description="A imitation of Web Instagram build with React / Express.js / GraphQL and MongoDB. The design and styling is done with Styled Components / SCSS. The authentication is done with a JWT token which is stored as a cookie. The list of functionality includes creating accounts, adding pictures (stored via AWS S3), likes and comments."
             ></Dropdown>
           </motion.div>
         )}
@@ -158,11 +155,7 @@ function Timeline() {
             <Dropdown
               title="Spotifier"
               subtitle="spotifier"
-              description="Spotifier is a React single page web application that gathers data from the Spotify API 
-              and gives the user details about his usual playlists and his preferences in terms of music.
-               The functionality of the application includes displaying statistics about the user's favorite artists, 
-               information about his Spotify profile and his music playlists, details about what kind of music he
-              listens to and recommendations of new music based on his preference."
+              description="React single web page application that consumes the Spotify API to create charts that give information to the user about favourite music, artists, music habits and further recommendations."
             ></Dropdown>
           </motion.div>
         )}
@@ -196,11 +189,7 @@ function Timeline() {
             <Dropdown
               title="Chess Game"
               subtitle="chess"
-              description="Chess game build with object-oriented programming. 
-              On a 8x8 board, the functionality includes taking turns for movement, capturing adversary pieces, 
-              checking the king of the adversary, pinning pieces in front of the direction of
-               the king depending on the attacking piece, adequate movement for all pieces, 
-               conditional movement of pieces depending on the situation on the board."
+              description="8x8 chess game build with JavaScript ES6+ and React. The functionality includes every pattern of movement (i.e., conquer, block, movement, check, movement in check, check-mate) in a normal chess game, excluding en-passant."
             ></Dropdown>
           </motion.div>
         )}
