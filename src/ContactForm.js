@@ -1,7 +1,22 @@
-import React from "react";
+import React, {useRef} from "react";
 import styled from "styled-components";
+import emailjs from "@emailjs/browser"
 
 const ContactForm = () => {
+  const form = useRef();
+
+
+  const sendForm = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_kmmc325', 'contact_form', form.current, 'Ju_I_KKjBVEW4uK6I')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+
+
   return (
     <div className="w-full sm:w-[60%]">
       <div style={{ display: "contents" }}>
@@ -9,13 +24,13 @@ const ContactForm = () => {
           <Container>
             <div style={{ opacity: "1" }}>
               <FormParentContainer>
-                <Form method="POST">
+                <Form onSubmit={sendForm} ref={form}>
                   <FormGrid>
                     <Input type="email" name="email" placeholder="Email" />
                   </FormGrid>
                   <TextArea
+                    name="description"
                     placeholder="Message"
-                    name="message"
                     rows={10}
                   ></TextArea>
                   <div>
