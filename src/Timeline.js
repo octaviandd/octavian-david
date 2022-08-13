@@ -78,6 +78,7 @@ function Timeline() {
             <Dropdown
               title="Coventry University"
               subtitle="09/2016 - 09/2019"
+              type="university"
               description="Bachelor's of Science - Psychology"
             ></Dropdown>
           </motion.div>
@@ -94,11 +95,9 @@ function Timeline() {
           >
             <Dropdown
               title="HERD.io"
+              type="job"
               subtitle="06/2020 - 09/2020"
-              description="Worked on multiple projects with different customers.
-                          Designed websites.
-                          Solved reported problems related to customer online shops. 
-                          Provided new ways to maximize revenue for various businesses."
+              description="Worked on multiple projects with different customers.Designed websites.Solved reported problems related to customer online shops.Provided new ways to maximize revenue for various businesses."
             ></Dropdown>
           </motion.div>
         )}
@@ -115,6 +114,9 @@ function Timeline() {
           >
             <Dropdown
               title="LaterGRAM"
+              type="project"
+              projectGithub="https://github.com/octaviandd/LaterGRAM"
+              projectLink="https://laterrgram.herokuapp.com"
               subtitle="latergram"
               description="A imitation of Web Instagram build with React / Express.js / GraphQL and MongoDB. The design and styling is done with Styled Components / SCSS. The authentication is done with a JWT token which is stored as a cookie. The list of functionality includes creating accounts, adding pictures (stored via AWS S3), likes and comments."
             ></Dropdown>
@@ -132,12 +134,9 @@ function Timeline() {
           >
             <Dropdown
               title="Windows-Plus"
+              type="job"
               subtitle="09/2020 - 06/2021"
-              description="Built a back-end system for the business.
-                          Designed the website of the business.
-                          Restructured old systems to increase efficiency.
-                          Provided new ways to market the products of the business.
-                          "
+              description="Built a back-end system for the business.Designed the website of the business.Restructured old systems to increase efficiency.Provided new ways to market the products of the business."
             ></Dropdown>
           </motion.div>
         )}
@@ -154,7 +153,9 @@ function Timeline() {
           >
             <Dropdown
               title="Spotifier"
-              subtitle="spotifier"
+              type="project"
+              projectGithub="https://github.com/octaviandd/Spotifier"
+              projectLink="https://ilikespotify.herokuapp.com/"
               description="React single web page application that consumes the Spotify API to create charts that give information to the user about favourite music, artists, music habits and further recommendations."
             ></Dropdown>
           </motion.div>
@@ -171,6 +172,7 @@ function Timeline() {
           >
             <Dropdown
               title="Birmingham City University"
+              type="university"
               subtitle="01/2021 - 01/2022"
               description="Master's of Science - Psychology"
             ></Dropdown>
@@ -188,7 +190,9 @@ function Timeline() {
           >
             <Dropdown
               title="Chess Game"
-              subtitle="chess"
+              type="project"
+              projectGithub="https://github.com/octaviandd/Chess/tree/master/chess-react"
+              projectLink="https://react-chessgame.netlify.app/"
               description="8x8 chess game build with JavaScript ES6+ and React. The functionality includes every pattern of movement (i.e., conquer, block, movement, check, movement in check, check-mate) in a normal chess game, excluding en-passant."
             ></Dropdown>
           </motion.div>
@@ -206,12 +210,7 @@ function Timeline() {
             <Dropdown
               title="Castle Fine Art"
               subtitle="02/2022 - Current Position"
-              description="Increase e-commerce revenues.
-                          Develop a Content Management System.
-                          Solve ad-hoc organizational problems.
-                          Solve emerging infrastructure-related problems.
-                          Build new means to increase business efficiency.
-                          "
+              description="Increase e-commerce revenues.Develop a Content Management System.Solve ad-hoc organizational problems.Solve emerging infrastructure-related problems.Build new means to increase business efficiency."
             ></Dropdown>
           </motion.div>
         )}

@@ -2,10 +2,16 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CaretDown } from "phosphor-react";
-import { GithubLogo, Package } from "phosphor-react";
+import { GithubLogo, Package, CaretDown } from "phosphor-react";
 
-const Dropdown = ({ title, description, subtitle }) => {
+const Dropdown = ({
+  title,
+  description,
+  type,
+  projectGithub,
+  projectLink,
+  subtitle,
+}) => {
   const [isOpen, toggleOpen] = useState(false);
 
   return (
@@ -27,33 +33,12 @@ const Dropdown = ({ title, description, subtitle }) => {
             >
               {title}
             </p>
-            {subtitle === "chess" ? (
+            {type === "project" ? (
               <div className="flex gap-1 mt-[3px]">
-                <a
-                  className=""
-                  href="https://github.com/octaviandd/Chess/tree/master/chess-react"
-                >
+                <a className="" href={projectGithub}>
                   <GithubLogo size={20} color="#aa7941" />
                 </a>
-                <a className="" href="https://react-chessgame.netlify.app/">
-                  <Package size={20} color="#aa7941" />
-                </a>
-              </div>
-            ) : subtitle === "latergram" ? (
-              <div className="flex gap-1 mt-[3px]">
-                <a href="https://github.com/octaviandd/LaterGRAM">
-                  <GithubLogo size={20} color="#aa7941" />
-                </a>
-                <a className="" href="https://laterrgram.herokuapp.com">
-                  <Package size={20} color="#aa7941" />
-                </a>
-              </div>
-            ) : subtitle === "spotifier" ? (
-              <div className="flex gap-1 mt-[3px]">
-                <a href="https://github.com/octaviandd/Spotifier">
-                  <GithubLogo size={20} color="#aa7941" />
-                </a>
-                <a className="" href="https://ilikespotify.herokuapp.com/">
+                <a className="" href={projectLink}>
                   <Package size={20} color="#aa7941" />
                 </a>
               </div>
@@ -61,7 +46,6 @@ const Dropdown = ({ title, description, subtitle }) => {
               <span className="text-[#666666] text-[14px]">{subtitle}</span>
             )}
           </div>
-
           <motion.span
             className="w-[24px] h-[24px]"
             animate={{ rotate: isOpen ? 180 : 0 }}
@@ -70,14 +54,10 @@ const Dropdown = ({ title, description, subtitle }) => {
           </motion.span>
         </div>
         <div className="pt-[10px] pb-[20px] px-[20px]">
-          {subtitle === "spotifier" ||
-          subtitle === "latergram" ||
-          subtitle === "09/2016 - 09/2019" ||
-          subtitle === "01/2021 - 01/2022" ||
-          subtitle === "chess" ? (
+          {type === "project" || type === "university" ? (
             <span className="text-[#666666]">{description}</span>
           ) : (
-            <ul className="list-disc">
+            <ul className="list-disc px-[10px]">
               {description
                 .split(".")
                 .slice(0, -1)

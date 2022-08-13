@@ -32,12 +32,12 @@ module.exports = function (env, args) {
           test: /\.m?js$/,
           exclude: /(node_modules)/,
           use: {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
-              presets: ['@babel/preset-env', '@babel/preset-react'],
-              plugins: ['@babel/plugin-proposal-object-rest-spread']
-            }
-          }
+              presets: ["@babel/preset-env", "@babel/preset-react"],
+              plugins: ["@babel/plugin-proposal-object-rest-spread"],
+            },
+          },
         },
         {
           test: /\.css$/,
@@ -48,7 +48,13 @@ module.exports = function (env, args) {
           ],
         },
         {
-          test: /\.(png|jpe?g|gif)$/i,
+          test: /\.svg$/i,
+          issuer: /\.[jt]sx?$/,
+          resourceQuery: { not: [/url/] },
+          use: ["@svgr/webpack"],
+        },
+        {
+          test: /\.(png|jpe?g)$/i,
           use: [
             {
               loader: "file-loader",
@@ -58,13 +64,6 @@ module.exports = function (env, args) {
               },
             },
           ],
-        },
-        {
-          test: /\.mp3$/,
-          loader: "file-loader",
-          options: {
-            name: "[path][name].[ext]",
-          },
         },
       ],
     },
@@ -99,7 +98,6 @@ module.exports = function (env, args) {
             name: "vendors",
             chunks: "all",
           },
-          // This can be your own design library.
           antd: {
             test: /node_modules\/(antd\/).*/,
             name: "antd",
@@ -111,9 +109,7 @@ module.exports = function (env, args) {
         name: "manifest",
       },
       minimize: isProduction,
-      minimizer: [
-        new OptimizeCssAssetsPlugin(),
-      ],
+      minimizer: [new OptimizeCssAssetsPlugin()],
     },
     devServer: {
       compress: true,
