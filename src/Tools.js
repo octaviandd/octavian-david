@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import JavaScriptSVG from "./svgs/JavaScriptSVG.svg";
 import ReactSVG from "./svgs/ReactSVG.svg";
@@ -26,25 +28,25 @@ const Tools = () => {
         <p className="text-black font-bold">Tools</p>
       </div>
       <div className="flex flex-wrap px-[15px] py-[3px]">
-        <img src={JavaScriptSVG} />
-        <img src={ReactSVG} />
-        <img src={AngularSVG} />
-        <img src={VueSVG} />
-        <img src={WebpackSVG} />
-        <img src={SassSVG} />
-        <img src={NodeSVG} />
-        <img src={PhpSVG} />
-        <img src={ShopifySVG} />
-        <img src={HtmlSVG} />
-        <img src={TypeScriptSVG} />
-        <img src={HerokuSVG} />
-        <img src={TailwindSVG} />
-        <img src={GraphQLSVG} />
-        <img src={MongoDBSVG} />
-        <img src={GitLabSVG} />
-        <img src={GitHubSVG} />
-        <img src={BitBucketSVG} />
-        <img src={PythonSVG} />
+        <JavaScriptSVG />
+        <ReactSVG />
+        <AngularSVG />
+        <VueSVG />
+        <WebpackSVG />
+        <SassSVG />
+        <NodeSVG />
+        <PhpSVG />
+        <ShopifySVG />
+        <HtmlSVG />
+        <TypeScriptSVG />
+        <HerokuSVG />
+        <TailwindSVG />
+        <GraphQLSVG />
+        <MongoDBSVG />
+        <GitLabSVG />
+        <GitHubSVG />
+        <BitBucketSVG />
+        <PythonSVG />
       </div>
     </div>
   );
